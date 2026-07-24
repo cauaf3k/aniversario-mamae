@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#7d315e">
+  <meta name="description" content="Um presente de aniversário feito com amor para a melhor mãe do mundo.">
+  <title>Feliz Aniversário, Mãe!</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="imagens/icone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="musica" src="audio/naohaoutrolugar.mp3" preload="metadata" loop></audio>
+
+  <main class="app">
+    <section id="inicio" class="tela ativa hero">
+      <div class="brilho"></div>
+      <div class="cartao vidro">
+        <span class="etiqueta">UM PRESENTE ESPECIAL</span>
+        <h1>Feliz aniversário,<br><strong>Mãe!</strong></h1>
+        <p>Preparei este cantinho para lembrar o quanto você é amada e importante para mim.</p>
+        <button id="entrar" class="botao principal">🎁 Abrir presente</button>
+        <small>Ative o som para viver esse momento por completo ♡</small>
+      </div>
+    </section>
+
+    <section id="mensagem" class="tela">
+      <div class="cartao vidro">
+        <span class="icone-grande">💗</span>
+        <h2>Hoje celebramos você</h2>
+        <p>Mãe, sua presença deixa a minha vida mais bonita. Seu amor me fortalece, seus conselhos me guiam e seu sorriso sempre transforma qualquer dia.</p>
+        <button id="continuar" class="botao principal">Continuar ✨</button>
+      </div>
+    </section>
+
+    <section id="contador-area" class="tela">
+      <div class="cartao vidro largo">
+        <span class="etiqueta">NOSSA HISTÓRIA</span>
+        <h2>Amor que cresce a cada instante</h2>
+        <p>Desde 10 de dezembro de 2010, já compartilhamos aproximadamente:</p>
+        <div class="contador">
+          <div><strong id="anos">0</strong><span>anos</span></div>
+          <div><strong id="dias">0</strong><span>dias</span></div>
+          <div><strong id="horas">0</strong><span>horas</span></div>
+          <div><strong id="minutos">0</strong><span>minutos</span></div>
+          <div><strong id="segundos">0</strong><span>segundos</span></div>
+        </div>
+        <p class="delicado">E cada segundo ao seu lado é um presente.</p>
+        <button id="ver-historia" class="botao principal">Ver nossas memórias 📸</button>
+      </div>
+    </section>
+
+    <section id="album-area" class="tela">
+      <div class="cartao vidro largo album">
+        <span class="etiqueta">ÁLBUM DE MEMÓRIAS</span>
+        <h2>Momentos que guardo no coração</h2>
+        <div class="moldura">
+          <img id="foto-album" src="imagens/foto1.jpg" alt="Foto especial com a mamãe">
+          <div id="legenda" class="legenda">Nosso amor em cada sorriso.</div>
+        </div>
+        <div class="navegacao">
+          <button id="anterior" class="botao redondo" aria-label="Foto anterior">‹</button>
+          <span id="indicador">1 / 5</span>
+          <button id="proxima" class="botao redondo" aria-label="Próxima foto">›</button>
+        </div>
+        <button id="abrir-carta" class="botao principal">Ler minha carta 💌</button>
+      </div>
+    </section>
+
+    <section id="carta-area" class="tela">
+      <div class="carta papel">
+        <span class="etiqueta">PARA A MELHOR MÃE DO MUNDO</span>
+        <h2>Minha carta para você</h2>
+        <p id="texto-carta"></p>
+        <button id="abrir-final" class="botao principal" style="display:none;">🎁 Abrir meu último presente</button>
+      </div>
+    </section>
+
+    <section id="final-area" class="tela">
+      <div class="cartao vidro final">
+        <span class="icone-grande">🎂</span>
+        <h2>Feliz aniversário, Mãe!</h2>
+        <p>Que Deus abençoe profundamente sua vida, renove suas forças e realize os desejos do seu coração. Obrigado por ser meu porto seguro, meu exemplo e meu maior amor.</p>
+        <p class="assinatura">Eu te amo para sempre! ❤️</p>
+        <button id="recomecar" class="botao secundario">Rever presente</button>
+      </div>
+    </section>
+  </main>
+
+  <button id="som" class="som" aria-label="Ligar ou desligar música">🔊</button>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('service-worker.js'));
+    }
+  </script>
+</body>
+</html>

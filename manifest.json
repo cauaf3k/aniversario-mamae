@@ -1,0 +1,9 @@
+{
+  "name": "Presente de Aniversário para Mamãe",
+  "short_name": "Para Mamãe",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#7d315e",
+  "theme_color": "#7d315e",
+  "icons": [{"src":"imagens/icone.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}]
+}
